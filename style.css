@@ -1,4 +1,122 @@
+.img-blur {
+    filter: blur(3px);
+    opacity: 60%;
+}
+
 .card {
     padding-left: 25px !important;
     padding-right: 25px !important;
 }
+
+.icon-service {
+    font-size: xx-large;
+    color: #ffffff;
+}
+
+body {
+    background-color: #000000;
+}
+
+.section-dark {
+    background-color: #141414;
+  }
+
+  .card-dark {
+    background-color: #1c1c1c;
+    border: 1px solid #2a2a2a;
+    transition: 0.3s ease;
+  }
+
+  .card-dark:hover {
+    transform: translateY(-5px);
+    border-color: #ffffff;
+  }
+
+  .card-dark img {
+    height: 230px;
+    object-fit: cover;
+  }
+
+  .btn-outline-light {
+    border: 1px solid #444;
+  }
+
+  .btn-outline-light:hover {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  .price {
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  .badge-custom {
+    background-color: #2a2a2a;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  .page-link {
+    background-color: #1c1c1c;
+    color: #fff;
+    border: 1px solid #2a2a2a;
+    transition: 0.3s;
+  }
+  
+  .page-link:hover {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  .page-item.active .page-link {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  .form-control::placeholder {
+    color: #888 !important;
+    opacity: 1;
+  }
+  
+  .form-select {
+    color: #fff;
+  }
+
+  .rounded-4:hover {
+    transform: translateY(-5px);
+    transition: 0.3s ease;
+    border-color: #ff3c3c !important;
+  }
+
+  .social-icon {
+    font-size: 28px;
+    color: #888;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #2a2a2a;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    color: #fff;
+    border-color: #fff;
+    transform: translateY(-5px);
+  }
+
+.footer-social {
+    display: inline-block;
+    color: #888;
+    font-size: 20px;
+    margin-right: 12px;
+    transition: 0.3s;
+  }
+  
+  .footer-social:hover {
+    color: #fff;
+  }
