@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaWorks</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top">
+        <div class="container-fluid mx-5">
+            <a class="navbar-brand" href="#">Novaworks</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-flex flex-row-reverse mr-5" id="navbarNav">
+                <ul class="navbar-nav p-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav p-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="product.html">Product</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav p-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav p-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Location</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div id="carouselSlidesOnly" class="carousel slide mb-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="asset/slide1.jpg" class="d-block w-100 img-blur" alt="...">
+                    <div class="carousel-caption d-none d-md-block position-absolute top-50 start-50 translate-middle">
+                        <h1 class="font-weight-bold">OUR PRODUCT</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="py-5">
+        <div class="container">
+      
+          <div class="text-center mb-4">
+            <h2 class="fw-light text-white">Cari Produk</h2>
+            <p class="text-secondary">Temukan unit atau sparepart yang kamu butuhkan</p>
+          </div>
+      
+          <div class="row g-4 justify-content-end">
+      
+            <div class="col-md-4">
+              <input type="text" id="searchInput"
+                class="form-control bg-dark text-light border-secondary"
+                placeholder="Cari produk...">
+            </div>
+      
+            <div class="col-md-4">
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Filter
+                </button>
+                <ul class="dropdown-menu" id="categoryFilter">
+                    <li><a class="dropdown-item active text-light bg-dark border-secondary" aria-current="true">All</a></li>
+                    <li><a class="dropdown-item">110 - 125 CC</a></li>
+                    <li class="dropdown-item">150 - 250 CC</li>
+                    <li class="dropdown-item">300 - 500 CC</li>
+                    <li class="dropdown-item">600++ CC</li>
+                  </ul>
+            </div>
+      
+          </div>
+      
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+      
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-dark text-light">
+                <a class="d-block"
+                   href="asset/Yamaha R6 Raven.jpg"
+                   data-lightbox="yamaha-r6"
+                   data-title="Yamaha R6"
+                    >
+                 <img src="asset/Yamaha R6 Raven.jpg" class="card-img-top mt-3 rounded-2 w-100" alt="Produk">
+                </a>
+                <div class="card-body">
+                    <span class="badge badge-custom mb-3">READY</span>
+                    <h5 class="card-title fw-light">Yamaha R6 2014</h5>
+                    <p class="text-secondary small">Full spec, surat lengkap, mesin halus.</p>
+                    <p class="price mt-3">Rp 267.000.000</p>
+                </div>
+                <div class="card-footer bg-transparent border-0 d-flex justify-content-between mb-2">
+                    <a href="#" class="btn btn-outline-light btn-sm">Detail</a>
+                    <a href="#" class="btn btn-light btn-sm">WhatsApp</a>
+                </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-dark h-100 text-light">
+                <a class="d-block"
+                   href="asset/r25vj.jpg"
+                   data-lightbox="yamaha-r25"
+                   data-title="Yamaha R25"
+                >
+                <img src="asset/r25vj.jpg" class="card-img-top mt-3 rounded-2 w-100" alt="Produk">
+                </a>
+                <div class="card-body">
+                    <span class="badge badge-custom mb-3">PROMO</span>
+                    <h5 class="card-title fw-light">Yamaha R25 V2</h5>
+                    <p class="text-secondary small">Pajak hidup, siap trackday, spec r3.</p>
+                    <p class="price mt-3">Rp 36.000.000</p>
+                </div>
+                <div class="card-footer bg-transparent border-0 d-flex justify-content-between mb-2">
+                    <a href="#" class="btn btn-outline-light btn-sm">Detail</a>
+                    <a href="#" class="btn btn-light btn-sm">WhatsApp</a>
+                </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-dark h-100 text-light">
+                <a class="d-block"
+                   href="asset/zx25r.jpg"
+                   data-lightbox="zx-25r"
+                   data-title="ZX 25R"
+                >
+                <img src="asset/zx25r.jpg" class="card-img-top mt-3 rounded-2 w-100" alt="Produk">
+                </a>
+                <div class="card-body">
+                    <span class="badge badge-custom mb-3">BEST SELLER</span>
+                    <h5 class="card-title fw-light">Kawasaki ZX25R  </h5>
+                    <p class="text-secondary small">4 cylinder, pajak hidup, cocok harian.</p>
+                    <p class="price mt-3">Rp 92.000.000</p>
+                </div>
+                <div class="card-footer bg-transparent border-0 d-flex justify-content-between mb-2">
+                    <a href="#" class="btn btn-outline-light btn-sm">Detail</a>
+                    <a href="#" class="btn btn-light btn-sm">WhatsApp</a>
+                </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-dark h-100 text-light">
+                <a class="d-block"
+                   href="asset/xsr155.jpg"
+                   data-lightbox="xsr-155"
+                   data-title="XSR 155"
+                >
+                <img src="asset/xsr155.jpg" class="card-img-top mt-3 rounded-2 w-100" alt="Produk">
+                </a>
+                <div class="card-body">
+                    <span class="badge badge-custom mb-3">READY</span>
+                    <h5 class="card-title fw-light">Yamaha XSR 155</h5>
+                    <p class="text-secondary small">Caferacer, surat lengkap, mesin halus.</p>
+                    <p class="price mt-3">Rp 20.500.000</p>
+                </div>
+                <div class="card-footer bg-transparent border-0 d-flex justify-content-between mb-2">
+                    <a href="#" class="btn btn-outline-light btn-sm">Detail</a>
+                    <a href="#" class="btn btn-light btn-sm">WhatsApp</a>
+                </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-dark h-100 text-light">
+                <a class="d-block"
+                   href="asset/stylo.jpg"
+                   data-lightbox="stylo-160"
+                   data-title="Stylo 160"
+                >
+                <img src="asset/stylo.jpg" class="card-img-top mt-3 rounded-2 w-100" alt="Produk">
+                </a>
+                <div class="card-body">
+                    <span class="badge badge-custom mb-3">PROMO</span>
+                    <h5 class="card-title fw-light">Honda Stylo 160</h5>
+                    <p class="text-secondary small">Pajak hidup, siap pakai, cocok harian.</p>
+                    <p class="price mt-3">Rp 22.000.000</p>
+                </div>
+                <div class="card-footer bg-transparent border-0 d-flex justify-content-between mb-2">
+                    <a href="#" class="btn btn-outline-light btn-sm">Detail</a>
+                    <a href="#" class="btn btn-light btn-sm">WhatsApp</a>
+                </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-dark h-100 text-light">
+                <a class="d-block"
+                   href="asset/xmax.jpg"
+                   data-lightbox="yamaha-xmax"
+                   data-title="Yamaha XMAX"
+                >
+                <img src="asset/xmax.jpg" class="card-img-top mt-3 rounded-2 w-100" alt="Produk">
+                </a>
+                <div class="card-body">
+                    <span class="badge badge-custom mb-3">BEST SELLER</span>
+                    <h5 class="card-title fw-light">Yamaha XMAX 2025</h5>
+                    <p class="text-secondary small">300cc, cocok harian, pajak hidup</p>
+                    <p class="price mt-3">Rp 42.000.000</p>
+                </div>
+                <div class="card-footer bg-transparent border-0 d-flex justify-content-between mb-2">
+                    <a href="#" class="btn btn-outline-light btn-sm">Detail</a>
+                    <a href="#" class="btn btn-light btn-sm">WhatsApp</a>
+                </div>
+                </div>
+            </div>
+
+            <nav class="mt-5">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item disabled">
+                    <a class="page-link bg-dark text-secondary border-secondary" href="#">
+                      Previous
+                    </a>
+                  </li>
+                  <li class="page-item active">
+                    <a class="page-link bg-light text-dark border-0" href="#">
+                      1
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link bg-dark text-light border-secondary" href="#">
+                      2
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link bg-dark text-light border-secondary" href="#">
+                      3
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link bg-dark text-light border-secondary" href="#">
+                      Next
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+          </div>
+        </div>
+      </section>
+  </body>
