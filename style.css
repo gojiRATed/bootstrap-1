@@ -1,122 +1,208 @@
 .img-blur {
-    filter: blur(3px);
-    opacity: 60%;
+  filter: blur(3px);
+  opacity: 60%;
 }
 
 .card {
-    padding-left: 25px !important;
-    padding-right: 25px !important;
+  padding-left: 25px !important;
+  padding-right: 25px !important;
 }
 
 .icon-service {
-    font-size: xx-large;
-    color: #ffffff;
+  font-size: xx-large;
+  color: #ffffff;
 }
 
 body {
-    background-color: #000000;
+  background-color: #000000;
 }
 
 .section-dark {
-    background-color: #141414;
-  }
+  background-color: #141414;
+}
 
-  .card-dark {
-    background-color: #1c1c1c;
-    border: 1px solid #2a2a2a;
-    transition: 0.3s ease;
-  }
+.card-dark {
+  background-color: #1c1c1c;
+  border: 1px solid #2a2a2a;
+  transition: 0.3s ease;
+}
 
-  .card-dark:hover {
-    transform: translateY(-5px);
-    border-color: #ffffff;
-  }
+.card-dark:hover {
+  transform: translateY(-5px);
+  border-color: #ffffff;
+}
 
-  .card-dark img {
-    height: 230px;
-    object-fit: cover;
-  }
+.card-dark img {
+  height: 230px;
+  object-fit: cover;
+}
 
-  .btn-outline-light {
-    border: 1px solid #444;
-  }
+.filter-btn.active {
+  background-color: #fff;
+  color: #000;
+}
 
-  .btn-outline-light:hover {
-    background-color: #ffffff;
-    color: #000000;
-  }
+.btn-outline-light {
+  border: 1px solid #444;
+}
 
-  .price {
-    font-weight: 600;
-    letter-spacing: 1px;
-  }
+.btn-outline-light:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
 
-  .badge-custom {
-    background-color: #2a2a2a;
-    font-size: 12px;
-    letter-spacing: 1px;
-  }
+.price {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
 
-  .page-link {
-    background-color: #1c1c1c;
-    color: #fff;
-    border: 1px solid #2a2a2a;
-    transition: 0.3s;
-  }
-  
-  .page-link:hover {
-    background-color: #ffffff;
-    color: #000000;
-  }
-  
-  .page-item.active .page-link {
-    background-color: #ffffff;
-    color: #000000;
-  }
+.badge-custom {
+  background-color: #2a2a2a;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
 
-  .form-control::placeholder {
-    color: #888 !important;
-    opacity: 1;
-  }
-  
-  .form-select {
-    color: #fff;
-  }
+.page-link {
+  background-color: #1c1c1c;
+  color: #fff;
+  border: 1px solid #2a2a2a;
+  transition: 0.3s;
+}
 
-  .rounded-4:hover {
-    transform: translateY(-5px);
-    transition: 0.3s ease;
-    border-color: #ff3c3c !important;
-  }
+.page-link:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
 
-  .social-icon {
-    font-size: 28px;
-    color: #888;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #2a2a2a;
-    border-radius: 50%;
-    text-decoration: none;
-    transition: 0.3s ease;
-  }
-  
-  .social-icon:hover {
-    color: #fff;
-    border-color: #fff;
-    transform: translateY(-5px);
-  }
+.page-item.active .page-link {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.form-control::placeholder {
+  color: #888 !important;
+  opacity: 1;
+}
+
+.form-select {
+  color: #fff;
+}
+
+.rounded-4:hover {
+  transform: translateY(-5px);
+  transition: 0.3s ease;
+  border-color: #ff3c3c !important;
+}
+
+.social-icon {
+  font-size: 28px;
+  color: #888;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #2a2a2a;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #fff;
+  border-color: #fff;
+  transform: translateY(-5px);
+}
 
 .footer-social {
-    display: inline-block;
-    color: #888;
-    font-size: 20px;
-    margin-right: 12px;
-    transition: 0.3s;
-  }
-  
-  .footer-social:hover {
-    color: #fff;
-  }
+  display: inline-block;
+  color: #888;
+  font-size: 20px;
+  margin-right: 12px;
+  transition: 0.3s;
+}
+
+.footer-social:hover {
+  color: #fff;
+}
+
+.race-ticket {
+  background: #1c1c1c;
+  border: 0px solid #2a2a2a;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+/* garis tiket */
+.race-ticket::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 70%;
+  width: 2px;
+  border-left: 2px dashed #444;
+}
+
+/* lubang tiket kiri */
+.race-ticket::after {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background: #000000;
+  border-radius: 50%;
+}
+
+/* lubang tiket kanan */
+.race-ticket .race-ticket-hole {
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background: #0f0f0f;
+  border-radius: 50%;
+}
+
+.race-ticket:hover {
+  transform: translateY(-5px);
+  border-color: #ff3c3c;
+}
+
+.main-color {
+  background: #0f0f0f !important;
+}
+
+table {
+  color: #fff;
+}
+
+.table {
+  border-color: #2a2a2a;
+}
+
+.table th,
+.table td {
+  border-color: #2a2a2a !important;
+}
+
+.img-thumbnail {
+  background: #1c1c1c;
+  border: 1px solid #333;
+}
+
+.btn-checkout {
+  background: #ff3c3c;
+  border: none;
+}
+
+.btn-checkout:hover {
+  background: #ff1f1f;
+}

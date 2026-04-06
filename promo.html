@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaWorks</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top">
+      <div class="container-fluid mx-5">
+        <a class="navbar-brand" href="#">Novaworks</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse d-flex flex-row-reverse mr-5"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="box.html"
+                ><i class="bi bi-box-seam fs-4" alt="icon box"></i>
+                <span
+                  id="cart-count"
+                  class="position-absolute translate-middle badge rounded-pill bg-danger"
+                >
+                  0
+                </span></a
+              >
+            </li>
+          </ul>
+          <ul class="navbar-nav p-2">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav p-2">
+            <li class="nav-item">
+              <a class="nav-link" href="product.html">Product</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav p-2">
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav p-2">
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav p-2">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Location</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav p-2">
+            <li class="nav-item">
+              <a class="nav-link" href="promo.html">Promo</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div
+        id="carouselSlidesOnly"
+        class="carousel slide mb-5"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="asset/slide1.jpg"
+              class="d-block w-100 img-blur"
+              alt="..."
+            />
+            <div
+              class="carousel-caption d-none d-md-block position-absolute top-50 start-50 translate-middle"
+            >
+              <h1 class="font-weight-bold">OUR PRODUCT</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <section class="py-5">
+      <div class="container">
+        <!-- Judul -->
+        <div class="text-center mb-4">
+          <h2 class="text-white fw-light">Promo Produk</h2>
+          <p class="text-secondary">
+            Pilih produk terbaik dengan penawaran spesial
+          </p>
+        </div>
+
+        <!-- Filter -->
+        <div class="d-flex justify-content-center gap-3 mb-5">
+          <button
+            class="btn btn-outline-light filter-btn active"
+            data-filter="all"
+          >
+            Semua Promo
+          </button>
+          <button
+            class="btn btn-outline-light filter-btn"
+            data-filter="promo-motor"
+          >
+            Promo Motor
+          </button>
+          <button
+            class="btn btn-outline-light filter-btn"
+            data-filter="promo-sparepart"
+          >
+            Promo Sparepart
+          </button>
+        </div>
+
+        <!-- Produk -->
+        <div class="row py-5" id="productList">
+          <!-- Produk 1 (Promo) -->
+          <div
+            class="col-md-3 col-lg-4 product-item"
+            data-category="promo-motor"
+          >
+            <div class="card card-dark text-light border-secondary h-100">
+              <img
+                src="https://via.placeholder.com/400x250"
+                class="card-img-top pt-2"
+              />
+              <div class="card-body justify-content-between">
+                <span class="badge bg-danger mb-2">PROMO</span>
+                <h5>Yamaha R6 2014</h5>
+                <p class="text-secondary small">Full spec, kondisi mulus</p>
+                <p class="text-danger fw-bold">Rp 267.000.000</p>
+
+                <div
+                  class="bg-transparent border-0 position-absolute bottom-0 end-0 mb-2 p-4 add-to-box"
+                >
+                  <a
+                    href="#"
+                    data-id="1"
+                    data-name="Yamaha R6 2014"
+                    data-price="267000000"
+                    class="btn btn-outline-danger btn-md w-100"
+                    ><i class="bi bi-box-seam fs-5" alt="icon box"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Produk 2 (Normal) -->
+          <div
+            class="col-md-3 col-lg-4 product-item"
+            data-category="promo-motor"
+          >
+            <div class="card card-dark text-light border-secondary h-100">
+              <img
+                src="https://via.placeholder.com/400x250"
+                class="card-img-top pt-2"
+              />
+              <div class="card-body">
+                <span class="badge bg-danger mb-2">PROMO</span>
+                <h5>Honda CBR 150R</h5>
+                <p class="text-secondary small">Motor harian nyaman</p>
+                <p class="text-danger fw-bold">Rp 28.500.000</p>
+
+                <div
+                  class="bg-transparent border-0 position-absolute bottom-0 end-0 mb-2 p-4 add-to-box"
+                >
+                  <a
+                    href="#"
+                    data-id="2"
+                    data-name="Honda CBR 150R"
+                    data-price="28500000"
+                    class="btn btn-outline-danger btn-md w-100"
+                    ><i class="bi bi-box-seam fs-5" alt="icon box"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Produk 3 (Promo) -->
+          <div
+            class="col-md-3 col-lg-4 product-item"
+            data-category="promo-sparepart"
+          >
+            <div class="card card-dark text-light border-secondary h-100">
+              <img
+                src="https://via.placeholder.com/400x250"
+                class="card-img-top pt-2"
+              />
+              <div class="card-body">
+                <span class="badge bg-danger mb-2">PROMO</span>
+                <h5>Ban Michelin 17"</h5>
+                <p class="text-secondary small">Grip maksimal</p>
+                <p class="text-danger fw-bold">Rp 950.000</p>
+
+                <div
+                  class="bg-transparent border-0 position-absolute bottom-0 end-0 mb-2 p-4 add-to-box"
+                >
+                  <a
+                    href="#"
+                    data-id="3"
+                    data-name="Ban Michelin 17\"
+                    data-price="950000"
+                    class="btn btn-outline-danger btn-md w-100"
+                    ><i class="bi bi-box-seam fs-5" alt="icon box"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="pt-5 pb-3"
+      style="background-color: #0a0a0a; border-top: 1px solid #1f1f1f"
+    >
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <h5 class="text-white">NOVAWORKS</h5>
+            <p class="text-secondary small">
+              Showroom dan bengkel motor spesialis maintenance, tune-up, dan
+              racing setup. Kualitas, performa, dan kepuasan pelanggan adalah
+              prioritas kami.
+            </p>
+          </div>
+
+          <div class="col-lg-3">
+            <h6 class="text-white mb-3">Kontak</h6>
+            <p class="text-secondary small mb-2">
+              <i class="bi bi-telephone me-2"></i>
+              0805-0666-6666
+            </p>
+            <p class="text-secondary small mb-2">
+              <i class="bi bi-envelope me-2"></i>
+              novaworks@gmail.com
+            </p>
+            <p class="text-secondary small mb-2">
+              <i class="bi bi-whatsapp me-2"></i>
+              WhatsApp Booking 24 Jam
+            </p>
+          </div>
+
+          <div class="col-lg-3">
+            <h6 class="text-white mb-3">Alamat</h6>
+            <p class="text-secondary small mb-2">
+              <i class="bi bi-geo-alt me-2"></i>
+              Jl. Wringinrejo, No. 06<br />
+              Jawa Timur, Indonesia
+            </p>
+            <p class="text-secondary small">
+              <i class="bi bi-clock me-2"></i>
+              Senin – Sabtu<br />
+              09:00 – 21:00
+            </p>
+          </div>
+
+          <div class="col-lg-2">
+            <h6 class="text-white mb-3">Follow Us</h6>
+            <a href="#" class="footer-social">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="#" class="footer-social">
+              <i class="bi bi-whatsapp"></i>
+            </a>
+            <a href="#" class="footer-social">
+              <i class="bi bi-tiktok"></i>
+            </a>
+          </div>
+        </div>
+
+        <hr style="border-color: #111" />
+        <div class="text-center text-secondary small">
+          © 2026 NOVA WORKS. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      let box = JSON.parse(localStorage.getItem("box")) || [];
+
+      // Tambah ke keranjang
+      function addToBox(product) {
+        const existing = box.find((item) => item.id === product.id);
+
+        if (existing) {
+          existing.qty += 1;
+        } else {
+          box.push({ ...product, qty: 1 });
+        }
+
+        localStorage.setItem("box", JSON.stringify(box));
+        updateBoxCount();
+      }
+
+      document.querySelectorAll(".add-to-box").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const product = {
+            id: btn.dataset.id,
+            name: btn.dataset.name,
+            price: parseInt(btn.dataset.price),
+          };
+
+          addToBox(product);
+          alert("Produk ditambahkan ke box");
+        });
+      });
+
+      function updateBoxCount() {
+        const count = box.reduce((total, item) => total + item.qty, 0);
+        const boxCount = document.getElementById("box-count");
+
+        if (boxCount) {
+          boxCount.innerText = count;
+        }
+      }
+
+      // Jalankan saat load
+      updateBoxCount();
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const buttons = document.querySelectorAll(".filter-btn");
+        const products = document.querySelectorAll(".product-item");
+
+        buttons.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            // reset active
+            buttons.forEach((b) => b.classList.remove("active"));
+            btn.classList.add("active");
+
+            const filter = btn.getAttribute("data-filter");
+
+            products.forEach((product) => {
+              const category = product.getAttribute("data-category");
+
+              if (filter === "all" || category === filter) {
+                product.style.display = "block";
+              } else {
+                product.style.display = "none";
+              }
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

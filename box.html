@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Box</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top">
+      <div class="container-fluid mx-5">
+        <a class="navbar-brand" href="#">Novaworks</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse d-flex flex-row-reverse mr-5"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="box.html"
+                ><i class="bi bi-box-seam fs-4" alt="icon box"></i>
+                <span
+                  id="cart-count"
+                  class="position-absolute translate-middle badge rounded-pill bg-danger"
+                >
+                  0
+                </span></a
+              >
+            </li>
+          </ul>
+          <ul class="navbar-nav p-2">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav p-2">
+            <li class="nav-item">
+              <a class="nav-link" href="product.html">Product</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav p-2">
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav p-2">
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav p-2">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Location</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav p-2">
+            <li class="nav-item">
+              <a class="nav-link" href="promo.html">Promo</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 🛒 KERANJANG -->
+    <div class="container py-5">
+      <h2 class="text-center mb-5 fw-bold text-white">Keranjang Belanja</h2>
+
+      <div class="table-responsive">
+        <table class="table align-middle text-center">
+          <!-- HEADER -->
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Produk</th>
+              <th>Harga</th>
+              <th>Jumlah</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+
+          <!-- BODY -->
+          <tbody id="cart-body"></tbody>
+
+          <!-- TOTAL -->
+          <tfoot>
+            <tr>
+              <th colspan="4" class="text-end">Total:</th>
+              <th id="cart-total">Rp 0</th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <!-- BUTTON -->
+      <div class="text-end">
+        <button class="btn btn-checkout text-light" onclick="checkoutWA()">
+          Checkout
+        </button>
+      </div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script>
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      // format rupiah
+      function formatRupiah(angka) {
+        return "Rp " + angka.toLocaleString("id-ID");
+      }
+
+      // render table
+      function renderCart() {
+        const body = document.getElementById("cart-body");
+        const totalEl = document.getElementById("cart-total");
+
+        body.innerHTML = "";
+
+        if (cart.length === 0) {
+          body.innerHTML =
+            "<tr><td colspan='5' class='text-secondary'>Keranjang kosong</td></tr>";
+          totalEl.innerText = "Rp 0";
+          return;
+        }
+
+        let total = 0;
+
+        cart.forEach((item, index) => {
+          total += item.price * item.qty;
+
+          body.innerHTML += `
+      <tr>
+
+        <!-- GAMBAR LIGHTBOX -->
+        <td>
+          <a href="${item.image || "https://via.placeholder.com/400"}"
+             data-lightbox="produk"
+             data-title="${item.name}">
+             
+            <img src="${item.image || "https://via.placeholder.com/150"}"
+                 width="100"
+                 class="img-thumbnail d-none d-sm-block">
+                 
+            <span class="d-block d-sm-none">${item.name}</span>
+          </a>
+        </td>
+
+        <td>${item.name}</td>
+        <td>${formatRupiah(item.price)}</td>
+
+        <!-- QTY -->
+        <td>
+          <button class="btn btn-sm btn-outline-light" onclick="changeQty(${index}, -1)">-</button>
+          ${item.qty}
+          <button class="btn btn-sm btn-outline-light" onclick="changeQty(${index}, 1)">+</button>
+        </td>
+
+        <td>${formatRupiah(item.price * item.qty)}</td>
+
+      </tr>
+    `;
+        });
+
+        totalEl.innerText = formatRupiah(total);
+      }
+
+      // ubah qty
+      function changeQty(index, change) {
+        cart[index].qty += change;
+
+        if (cart[index].qty <= 0) {
+          cart.splice(index, 1);
+        }
+
+        saveCart();
+      }
+
+      // simpan
+      function saveCart() {
+        localStorage.setItem("cart", JSON.stringify(cart));
+        renderCart();
+      }
+
+      // checkout WA
+      function checkoutWA() {
+        if (cart.length === 0) {
+          alert("Keranjang kosong!");
+          return;
+        }
+
+        let pesan = "Halo, saya ingin order:%0A%0A";
+
+        cart.forEach((item) => {
+          pesan += `- ${item.name} (x${item.qty})%0A`;
+        });
+
+        window.open("https://wa.me/628XXXXXXXXXX?text=" + pesan);
+      }
+
+      // init
+      renderCart();
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+  </body>
+</html>
