@@ -46,7 +46,7 @@
               <a class="nav-link" href="box.html"
                 ><i class="bi bi-box-seam fs-4" alt="icon box"></i>
                 <span
-                  id="cart-count"
+                  id="box-count"
                   class="position-absolute translate-middle badge rounded-pill bg-danger"
                 >
                   0
@@ -104,7 +104,7 @@
             <div
               class="carousel-caption d-none d-md-block position-absolute top-50 start-50 translate-middle"
             >
-              <h1 class="font-weight-bold">Enjoy our promo</h1>
+              <h1 class="font-weight-bold">Enjoy Our Promo</h1>
             </div>
           </div>
         </div>
@@ -113,7 +113,6 @@
 
     <section class="py-5">
       <div class="container">
-        <!-- Judul -->
         <div class="text-center mb-4">
           <h2 class="text-white fw-light">Promo Produk</h2>
           <p class="text-secondary">
@@ -121,7 +120,6 @@
           </p>
         </div>
 
-        <!-- Filter -->
         <div class="d-flex justify-content-center gap-3 mb-5">
           <button
             class="btn btn-outline-light filter-btn active"
@@ -143,21 +141,19 @@
           </button>
         </div>
 
-        <!-- Produk -->
-        <div class="row py-5" id="productList">
-          <!-- Produk 1 (Promo) -->
+        <div class="row g-4" id="productList">
           <div
-            class="col-md-3 col-lg-4 product-item"
+            class="col-md-6 col-lg-4 product-item"
             data-category="promo-motor"
           >
             <div class="card card-dark text-light border-secondary h-100">
               <img
-                src="https://via.placeholder.com/400x250"
-                class="card-img-top pt-2"
+                src="asset/Yamaha R6 Raven.jpg"
+                class="pt-2 rounded-4"
               />
               <div class="card-body justify-content-between">
                 <span class="badge bg-danger mb-2">PROMO</span>
-                <h5>Yamaha R6 2014</h5>
+                <h5 class="card-title fw-light">Yamaha R6 2014</h5>
                 <p class="text-secondary small">Full spec, kondisi mulus</p>
                 <p class="text-danger fw-bold">Rp 267.000.000</p>
 
@@ -177,21 +173,20 @@
             </div>
           </div>
 
-          <!-- Produk 2 (Normal) -->
           <div
-            class="col-md-3 col-lg-4 product-item"
+            class="col-md-6 col-lg-4 product-item"
             data-category="promo-motor"
           >
             <div class="card card-dark text-light border-secondary h-100">
               <img
-                src="https://via.placeholder.com/400x250"
-                class="card-img-top pt-2"
+                src="asset/zx25r.jpg"
+                class="pt-2 rounded-4"
               />
               <div class="card-body">
                 <span class="badge bg-danger mb-2">PROMO</span>
-                <h5>Honda CBR 150R</h5>
-                <p class="text-secondary small">Motor harian nyaman</p>
-                <p class="text-danger fw-bold">Rp 28.500.000</p>
+                <h5 class="card-title fw-light">Kawasaki ZX25R</h5>
+                <p class="text-secondary small">Motor sport harian nyaman</p>
+                <p class="text-danger fw-bold">Rp 90.500.000</p>
 
                 <div
                   class="bg-transparent border-0 position-absolute bottom-0 end-0 mb-2 p-4 add-to-box"
@@ -199,8 +194,8 @@
                   <a
                     href="#"
                     data-id="2"
-                    data-name="Honda CBR 150R"
-                    data-price="28500000"
+                    data-name="Kawasaki ZX25R"
+                    data-price="90500000"
                     class="btn btn-outline-danger btn-md w-100"
                     ><i class="bi bi-box-seam fs-5" alt="icon box"></i
                   ></a>
@@ -209,19 +204,18 @@
             </div>
           </div>
 
-          <!-- Produk 3 (Promo) -->
           <div
-            class="col-md-3 col-lg-4 product-item"
+            class="col-md-6 col-lg-4 product-item"
             data-category="promo-sparepart"
           >
             <div class="card card-dark text-light border-secondary h-100">
               <img
-                src="https://via.placeholder.com/400x250"
-                class="card-img-top pt-2"
+                src="asset/michelinpower.jpg"
+                class="pt-2 rounded-4"
               />
               <div class="card-body">
                 <span class="badge bg-danger mb-2">PROMO</span>
-                <h5>Ban Michelin 17"</h5>
+                <h5 class="card-title fw-light">Ban Michelin 17"</h5>
                 <p class="text-secondary small">Grip maksimal</p>
                 <p class="text-danger fw-bold">Rp 950.000</p>
 
@@ -233,6 +227,99 @@
                     data-id="3"
                     data-name="Ban Michelin 17\"
                     data-price="950000"
+                    class="btn btn-outline-danger btn-md w-100"
+                    ><i class="bi bi-box-seam fs-5" alt="icon box"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-md-6 col-lg-4 product-item"
+            data-category="promo-sparepart"
+          >
+            <div class="card card-dark text-light border-secondary h-100">
+              <img
+                src="asset/stylo.jpg"
+                class="pt-2 rounded-4"
+              />
+              <div class="card-body">
+                <span class="badge bg-danger mb-2">PROMO</span>
+                <h5 class="card-title fw-light">Honda Stylo 160"</h5>
+                <p class="text-secondary small">Matic harian</p>
+                <p class="text-danger fw-bold">Rp 24.950.000</p>
+
+                <div
+                  class="bg-transparent border-0 position-absolute bottom-0 end-0 mb-2 p-4 add-to-box"
+                >
+                  <a
+                    href="#"
+                    data-id="4"
+                    data-name="Honda Stylo 160"
+                    data-price="24950000"
+                    class="btn btn-outline-danger btn-md w-100"
+                    ><i class="bi bi-box-seam fs-5" alt="icon box"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-md-6 col-lg-4 product-item"
+            data-category="promo-sparepart"
+          >
+            <div class="card card-dark text-light border-secondary h-100">
+              <img
+                src="asset/corse.jpg"
+                class="pt-2 rounded-4"
+              />
+              <div class="card-body">
+                <span class="badge bg-danger mb-2">PROMO</span>
+                <h5 class="card-title fw-light">Corse Carbon Exhaust"</h5>
+                <p class="text-secondary small">Underbelly Exhaust for ZX25</p>
+                <p class="text-danger fw-bold">Rp 3.950.000</p>
+
+                <div
+                  class="bg-transparent border-0 position-absolute bottom-0 end-0 mb-2 p-4 add-to-box"
+                >
+                  <a
+                    href="#"
+                    data-id="5"
+                    data-name="Corse Carbon"
+                    data-price="3950000"
+                    class="btn btn-outline-danger btn-md w-100"
+                    ><i class="bi bi-box-seam fs-5" alt="icon box"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-md-6 col-lg-4 product-item"
+            data-category="promo-sparepart"
+          >
+            <div class="card card-dark text-light border-secondary h-100">
+              <img
+                src="asset/liquimoly.jpg"
+                class="pt-2 rounded-4"
+              />
+              <div class="card-body">
+                <span class="badge bg-danger mb-2">PROMO</span>
+                <h5 class="card-title fw-light">Liqui Moly Oil"</h5>
+                <p class="text-secondary small">Racing Engine Lubricant</p>
+                <p class="text-danger fw-bold">Rp 350.000</p>
+
+                <div
+                  class="bg-transparent border-0 position-absolute bottom-0 end-0 mb-2 p-4 add-to-box"
+                >
+                  <a
+                    href="#"
+                    data-id="6"
+                    data-name="Liqui Moly"
+                    data-price="350000"
                     class="btn btn-outline-danger btn-md w-100"
                     ><i class="bi bi-box-seam fs-5" alt="icon box"></i
                   ></a>
